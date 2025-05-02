@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <head>
+        <TITLE>date</TITLE>
+    </head>
+    <BODY>
+        <h1>current date and time</h1>
+        <p id="cDay"></p>
+        <p id="cMonth"></p>
+        <p id="cYear"></p>
+        <p id="cHour"></p>
+        <p id="cMinute"></p>
+        <p id="cSecond"></p>
+        <p id="cMillisecond"></p>
+        <p id="cIt"></p>
+        <p id="cutc"></p>
+        <script>
+            const now = new Date();
+            const cDay = now.getDate();
+            const cMonth = now.getMonth()+1;
+            const cyear = now.getFullYear();
+            const chour = now.getHours();
+            const cminute = now.getMinutes();
+            const csecond = now.getSeconds();
+            const cmillisecond = now.getMilliseconds();
+
+
+            document.getElementById("cDay").innerHTML="Day " +  cDay;
+            document.getElementById("cMonth").innerHTML="Month " + cMonth;
+            document.getElementById("cYear").innerHTML="Year " + cyear;
+            document.getElementById("cHour").innerHTML="Hour " + chour;
+            document.getElementById("cMinute").innerHTML="Minute " + cminute;
+            document.getElementById("cSecond").innerHTML="Second " + csecond;
+            document.getElementById("cMillisecond").innerHTML="Millisecond " + cmillisecond;
+            document.getElementById("cIt").innerHTML="Local time " + now.toString();
+            document.getElementById("cutc").innerHTML="UTC Time " + now.toUTCString();
+        </script>
+    </BODY>
+</html>
